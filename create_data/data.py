@@ -48,7 +48,7 @@ random_values = list(range(1000, 10000, 100))
 random.shuffle(random_values)
 
 #number of tuples
-N=100
+N=10000000
 #Departaments
 dep_names=["Administrativo", "Atacado", "Atendimento ao cliente", "Auditoria", "Comercial", "Comunicação", "Contabilidade", "Controladoria", "Desenvolvimento", "Estratégia", "Esportes", "Financeiro", "Garantia de Qualidade",  "Inteligência de Mercado", "Legal", "Logística", "Manutenção", "Marketing", "Operações", "Pesquisa e Desenvolvimento", "Planejamento", "Planejamento Financeiro", "Processos", "Produção", "Projetos", "Recursos Humanos", "Seguros", "Tesouraria", "TI Tecnologia da Informação", "Treinamento e Desenvolvimento", "Tributário, Fiscal", "Varejo", "Vendas"]
 
