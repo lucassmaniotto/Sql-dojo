@@ -35,7 +35,7 @@ conn, cur = create_connection()
 random_values = list(range(1000, 10000, 100))
 random.shuffle(random_values)
 
-N = 10000000
+N = 10000
 dep_names = [
     "Administrativo", "Atacado", "Atendimento ao cliente", "Auditoria", "Comercial",
     "Comunicação", "Contabilidade", "Controladoria", "Desenvolvimento", "Estratégia",
