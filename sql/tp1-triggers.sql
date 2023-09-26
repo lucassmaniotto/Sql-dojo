@@ -104,22 +104,6 @@ BEFORE UPDATE ON empregados
 FOR EACH ROW
 EXECUTE FUNCTION verificar_salario_supervisor();
 
--- Gatilho AFTER para registrar histórico de salários
-CREATE OR REPLACE FUNCTION registrar_historico_salario()
-RETURNS TRIGGER AS $$
-BEGIN
-    INSERT INTO historico_salarios (emp_id, usuario, data_alteracao, salario_antigo, novo_salario)
-    VALUES (
-        NEW.emp_id,
-        current_user,
-        current_timestamp,
-        OLD.salario,
-        NEW.salario
-    );
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
 -- SELECT * FROM empregados WHERE emp_id = 1
 -- UPDATE empregados SET salario = 57000 WHERE emp_id = 2
 -- INSERT INTO empregados (emp_id, dep_id, supervisor_id, nome, salario)
