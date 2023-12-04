@@ -3,7 +3,7 @@ import random
 import csv
 
 def loadcsv():
-    csv_file_path = "ibge-fem-10000.csv"
+    csv_file_path = "create_data/csv.csv"
     data_to_insert = []
 
     with open(csv_file_path, "r") as csv_file:
@@ -17,7 +17,7 @@ def loadcsv():
 def create_connection():
     conn = psycopg2.connect(
         host="localhost",
-        database="dojo",
+        database="postgres",
         user="postgres",
         password="postgres"
     )
@@ -35,7 +35,7 @@ conn, cur = create_connection()
 random_values = list(range(1000, 10000, 100))
 random.shuffle(random_values)
 
-N = 10000
+N = 30000
 dep_names = [
     "Administrativo", "Atacado", "Atendimento ao cliente", "Auditoria", "Comercial",
     "Comunicação", "Contabilidade", "Controladoria", "Desenvolvimento", "Estratégia",
